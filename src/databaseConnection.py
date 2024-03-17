@@ -19,5 +19,3 @@ def close(con):
     if con is not None:
         con.close()
 
-
-

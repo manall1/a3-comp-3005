@@ -32,7 +32,6 @@ Ensure you have the following installed
     - ```cd src```
   - Replace the placeholder values for host, database, user, and password with your actual PostgreSQL database connection details.
 #### 2. Run the application
-  - Navigate to the '/src' directory
   - Run the studentManagementSystem.py file
     - ```python studentManagementSystem.py``` or ```python3 studentManagementSystem.py```
 

@@ -29,6 +29,22 @@ def addStudent(first_name, last_name, email, enrollment_date):
   print("Student added successfully")
   connection.commit()
   close(connection)
+
+def updateStudentEmail(student_id, new_email):
+  connection = connect()
+  cursor = connection.cursor()
+
+  # First, check if the new email already exists in the database
+  cursor.execute("SELECT * FROM students WHERE email = %s", (new_email,))
+  if cursor.fetchone() is not None:
+      print("New email already exists, please use a different email.")
+      return
+  
+  # If the new email does not exist, update the email for the student
+  cursor.execute("UPDATE students SET email = %s WHERE student_id = %s", (new_email, student_id))
+  print("Email updated successfully")
+  connection.commit()
+  close(connection)
   
   
 # call the function
@@ -41,6 +57,12 @@ def main():
   print("\n Adding student Manal to the school:")
   addStudent("Manal", "Hassan", "manal@carleton.ca", "2021-09-01")
   print("\n All the students in this school after adding Manal: ")
+  displayAllStudents()
+
+   # Update the email for student with student_id 1
+  print("\n Updating the email for student with student_id 1")
+  updateStudentEmail(1, "johndoe@example.com")
+  print("\n All the students in this school after updating the email for student with student_id 1: ")
   displayAllStudents()
 
 main()

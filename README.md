@@ -1,6 +1,9 @@
-# Database Interaction with PostgreSQL and Python
+# **Database Interaction with PostgreSQL and Python**
 
-This  is a Python application designed to interact with a PostgreSQL database for managing student records. It supports basic CRUD (Create, Read, Update, Delete) operations on student data, including adding new students, displaying all student records, updating student emails, and deleting students.
+#### This  is a Python application designed to interact with a PostgreSQL database for managing student records. It supports basic CRUD (Create, Read, Update, Delete) operations on student data, including adding new students, displaying all student records, updating student emails, and deleting students.
+
+###### **Manal Hassan - 101263813**
+
 
 ## Requirenments 
 Ensure you have the following installed
@@ -33,9 +36,10 @@ Ensure you have the following installed
   - Run the studentManagementSystem.py file
     - ```python studentManagementSystem.py``` or ```python3 studentManagementSystem.py```
 
+## YouTube Link
+[Video Demonstration](https://youtu.be/SSBJVHoHRkw)
 
-**Manal Hassan - 101263813**
-[Video Demonstration]()
+
 
 
 

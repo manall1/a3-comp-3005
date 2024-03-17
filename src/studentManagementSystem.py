@@ -74,13 +74,13 @@ def main():
   print("\n All the students in this school after adding Manal: ")
   displayAllStudents()
 
-   # Update the email for student with student_id 1
+  #  # Update the email for student with student_id 1
   print("\n Updating the email for student with student_id 1")
-  updateStudentEmail(1, "johndoe@example.com")
+  updateStudentEmail(1, "john_new_email@example.com")
   print("\n All the students in this school after updating the email for student with student_id 1: ")
   displayAllStudents()
 
-  # Delete the student with student_id 1
+  # # Delete the student with student_id 1
   print("\n Deleting the student with student_id 2")
   deleteStudent(2)
   print("\n All the students in this school after deleting the student with student_id 2: ")

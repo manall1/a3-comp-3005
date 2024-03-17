@@ -45,6 +45,21 @@ def updateStudentEmail(student_id, new_email):
   print("Email updated successfully")
   connection.commit()
   close(connection)
+
+def deleteStudent(student_id):
+  connection = connect()
+  cursor = connection.cursor()
+
+  # First, check if the student exists in the database
+  cursor.execute("SELECT * FROM students WHERE student_id = %s", (student_id,))
+  if cursor.fetchone() is None:
+      print("Student with this ID does not exist")
+      return
+
+  cursor.execute("DELETE FROM students WHERE student_id = %s", (student_id,))
+  print("Student deleted successfully")
+  connection.commit()
+  close(connection)
   
   
 # call the function
@@ -63,6 +78,12 @@ def main():
   print("\n Updating the email for student with student_id 1")
   updateStudentEmail(1, "johndoe@example.com")
   print("\n All the students in this school after updating the email for student with student_id 1: ")
+  displayAllStudents()
+
+  # Delete the student with student_id 1
+  print("\n Deleting the student with student_id 2")
+  deleteStudent(2)
+  print("\n All the students in this school after deleting the student with student_id 2: ")
   displayAllStudents()
 
 main()

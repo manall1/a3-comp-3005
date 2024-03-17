@@ -18,7 +18,7 @@ def addStudent(first_name, last_name, email, enrollment_date):
   connection = connect()
   cursor = connection.cursor()
 
-  # First, check if the email already exists in the database
+  # Check if the email already exists in the database
   cursor.execute("SELECT * FROM students WHERE email = %s", (email,))
   if cursor.fetchone() is not None:
       print("Email already exists")
@@ -34,7 +34,7 @@ def updateStudentEmail(student_id, new_email):
   connection = connect()
   cursor = connection.cursor()
 
-  # First, check if the new email already exists in the database
+  # Check if the new email already exists in the database
   cursor.execute("SELECT * FROM students WHERE email = %s", (new_email,))
   if cursor.fetchone() is not None:
       print("New email already exists, please use a different email.")
@@ -50,7 +50,7 @@ def deleteStudent(student_id):
   connection = connect()
   cursor = connection.cursor()
 
-  # First, check if the student exists in the database
+  # Check if the student exists in the database
   cursor.execute("SELECT * FROM students WHERE student_id = %s", (student_id,))
   if cursor.fetchone() is None:
       print("Student with this ID does not exist")

@@ -36,7 +36,7 @@ Ensure you have the following installed
     - ```python studentManagementSystem.py``` or ```python3 studentManagementSystem.py```
 
 ## YouTube Link
-[Video Demonstration](https://youtu.be/SSBJVHoHRkw)
+[Video Demonstration](https://youtu.be/SSBJVHoHRk)
 
 
 
